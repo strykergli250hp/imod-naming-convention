@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="server_info.css">
+</head>
+
+<body>
+
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+
+<h2>Server Host Naming Convention for iMOD</h2>
+<i style="color: gray; font-size: 16px;">
+	Reference: 
+	<a href="https://disney.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB0014412" target="_blank">KB0014412</a>
+</i>
+<hr/>
+
+<p>
+Server Host: 
+<input type=text id="server_host_name" value="" autofocus />
+<button type="button" onclick="evalServerHostInfo()">Display Info</button>
+<button type="button" onclick="clearInfo()">Clear</button>
+<p/>
+<i style="color: gray; font-size: 14px;">E.g.: "FLDCPPCEH0001A-M01"</i>
+</p>
+
+<div id="invalid_input" class="errorMessage" style="display: none;">
+	<i><b>(!)</b> Invalid or unknown server host name.</i>
+</div>
+
+<div id="information_section" style="display: none;">
+	
+	<h3>Hardware Information</h3>
+	<div class="divTable">
+		<div class="divTableBody">
+			<div class="divTableRow">
+				<div class="divTableCell" style="width: 100px">Primary</div>
+				<div class="divTableCell"><span id="primary_information" class="hardware_text"></span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Secondary</div>
+				<div class="divTableCell"><span id="secondary_information" class="hardware_text"></span></div>
+			</div>
+		</div>
+	</div>
+	
+	<br>
+
+	<h3>Code Values</h3>
+	<div class="divTable">
+		<div class="divTableBody">
+			<div class="divTableRow">
+				<div class="divTableCell" style="width: 250px"><b>Concept</b></div>
+				<div class="divTableCell" style="width: 50px"><b>Code</b></div>
+				<div class="divTableCell" style="width: 350px"><b>Value</b></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell" style="width: 250px">Location</div>
+				<div class="divTableCell" style="width: 50px"><span id="location_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell" style="width: 350px"><span id="location_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Server Type</div>
+				<div class="divTableCell"><span id="server_type_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="server_type_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Server Environment</div>
+				<div class="divTableCell"><span id="server_environment_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="server_environment_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Server Usage</div>
+				<div class="divTableCell"><span id="server_usage_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="server_usage_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Hardware Type</div>
+				<div class="divTableCell"><span id="hardware_type_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="hardware_type_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Server Purpose</div>
+				<div class="divTableCell"><span id="server_purpose_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="server_purpose_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Server Number</div>
+				<div class="divTableCell"><span id="server_number_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="server_number_value" class="monospace">Unknown</span></div>
+			</div>
+			<div class="divTableRow">
+				<div class="divTableCell">Cluster Node Designation</div>
+				<div class="divTableCell"><span id="cluster_node_code" class="monospace">Unknown</span></div>
+				<div class="divTableCell"><span id="cluster_node_value" class="monospace">Unknown</span></div>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- information_section -->
+
+    </div>
+  </div>
+</div>
+
+
+<script src="server_info.js"></script>
+
+</body>
+</html>
